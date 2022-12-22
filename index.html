@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UAS Anum</title>
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="bg-light">
+    <div class="container">
+      <h1 class="my-5 fs-3 fw-bolder text-center">
+        Metode Simpson 1/3 dan 3/8
+      </h1>
+
+      <div class="row pt-4 pb-5">
+        <section class="col-lg-8 mx-3 mx-md-0 pe-0 pe-md-5">
+          <h2 class="fs-4 fw-bolder pb-4">Input Data</h2>
+          <div class="row mb-3">
+            <label for="fxString" class="form-label">f(x)</label>
+            <div>
+              <textarea
+                class="form-control"
+                id="fxString"
+                rows="3"
+                placeholder="2.49,100,100.1"
+                required
+              ></textarea>
+              <div id="fxHelp" class="form-text">
+                <p class="mb-0">Masukan data berupa angka, minimal 3 buah.</p>
+                <p class="mb-0">Gunakan "," sebagai pemisah antar data.</p>
+                <p class="mb-0">Gunakan "." untuk bilangan desimal.</p>
+              </div>
+            </div>
+          </div>
+          <div class="mb-3 row">
+            <label for="hString" class="form-label">h</label>
+            <div>
+              <input
+                class="form-control"
+                type="text"
+                id="hString"
+                placeholder="10"
+                required
+              />
+              <div id="hHelp" class="form-text">
+                <p class="mb-0">Masukan h (jarak antar upaselang).</p>
+                <p class="mb-0">Gunakan "." untuk bilangan desimal.</p>
+              </div>
+            </div>
+          </div>
+          <div class="d-grid my-5">
+            <button type="button" id="buttonProcess" class="btn btn-primary">
+              Proses
+            </button>
+          </div>
+        </section>
+        <section
+          class="col-lg-4 mx-3 mx-md-0 py-5 px-4 rounded-2 bg-white result"
+        >
+          <h2 class="fs-4 fw-bolder pb-4">Hasil</h2>
+          <p class="row border border-secondary rounded-2 mx-1 py-2">
+            <span class="fw-bolder">Metode</span>
+            <span id="methodPrint"></span>
+          </p>
+          <p class="row border border-secondary rounded-2 mx-1 py-2">
+            <span class="fw-bolder">Nilai h</span>
+            <span id="hPrint"></span>
+          </p>
+          <p class="row border border-secondary rounded-2 mx-1 py-2">
+            <span class="fw-bolder">Nilai integrasi f(x)</span>
+            <span id="resultPrint"></span>
+          </p>
+        </section>
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
